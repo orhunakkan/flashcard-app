@@ -69,7 +69,7 @@
     </div>
 
     <script>
-        // Flashcard data - replace with your own questions and answers
+
         const flashcards = [
             {
                 question: "What is Document Object Model (DOM)?",
@@ -77,18 +77,15 @@
             },
         ];
 
-        // Variables
         let currentCard;
         let isShowingQuestion = true;
         const flashcardElement = document.getElementById('flashcard');
         const contentElement = document.getElementById('content');
 
-        // Get a random flashcard
         function getRandomCard() {
             return flashcards[Math.floor(Math.random() * flashcards.length)];
         }
 
-        // Show a random question
         function showRandomQuestion() {
             currentCard = getRandomCard();
             contentElement.textContent = currentCard.question;
@@ -103,11 +100,11 @@
             } else {
                 showRandomQuestion();
             }
-        }        // Event listener for both touch and click on the entire document
-        document.addEventListener('click', flipCard);
+        }
 
-        // Initialize with a random question
+        document.addEventListener('click', flipCard);
         showRandomQuestion();
+        
     </script>
 </body>
 
