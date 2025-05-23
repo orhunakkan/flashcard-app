@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcard Study App</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Fira Code', monospace;
             background-color: #121212;
@@ -26,7 +27,7 @@
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
         }
-        
+
         #flashcard {
             width: 90%;
             max-width: 500px;
@@ -41,17 +42,17 @@
             align-items: center;
             transition: transform 0.3s ease;
         }
-        
+
         #flashcard:active {
             transform: scale(0.98);
         }
-        
+
         #content {
             font-size: 24px;
             line-height: 1.6;
             word-wrap: break-word;
         }
-        
+
         .status {
             position: absolute;
             bottom: 20px;
@@ -60,54 +61,54 @@
         }
     </style>
 </head>
+
 <body>
     <div id="flashcard">
         <div id="content">Loading...</div>
     </div>
-    <div class="status">Tap/Click to flip card</div>
 
     <script>
         // Flashcard data - replace with your own questions and answers
         const flashcards = [
-            { 
-                question: "What is the capital of France?", 
-                answer: "Paris" 
+            {
+                question: "What is the capital of France?",
+                answer: "Paris"
             },
-            { 
-                question: "What is 2 + 2?", 
-                answer: "4" 
+            {
+                question: "What is 2 + 2?",
+                answer: "4"
             },
-            { 
-                question: "Who wrote 'Romeo and Juliet'?", 
-                answer: "William Shakespeare" 
+            {
+                question: "Who wrote 'Romeo and Juliet'?",
+                answer: "William Shakespeare"
             },
-            { 
-                question: "What is the powerhouse of the cell?", 
-                answer: "Mitochondria" 
+            {
+                question: "What is the powerhouse of the cell?",
+                answer: "Mitochondria"
             },
-            { 
-                question: "What is the chemical symbol for water?", 
-                answer: "H₂O" 
+            {
+                question: "What is the chemical symbol for water?",
+                answer: "H₂O"
             },
-            { 
-                question: "What is the largest planet in our solar system?", 
-                answer: "Jupiter" 
+            {
+                question: "What is the largest planet in our solar system?",
+                answer: "Jupiter"
             },
-            { 
-                question: "What year did World War II end?", 
-                answer: "1945" 
+            {
+                question: "What year did World War II end?",
+                answer: "1945"
             },
-            { 
-                question: "What is the capital of Japan?", 
-                answer: "Tokyo" 
+            {
+                question: "What is the capital of Japan?",
+                answer: "Tokyo"
             },
-            { 
-                question: "Who invented the telephone?", 
-                answer: "Alexander Graham Bell" 
+            {
+                question: "Who invented the telephone?",
+                answer: "Alexander Graham Bell"
             },
-            { 
-                question: "What is the speed of light?", 
-                answer: "299,792,458 meters per second" 
+            {
+                question: "What is the speed of light?",
+                answer: "299,792,458 meters per second"
             }
         ];
 
@@ -146,4 +147,5 @@
         showRandomQuestion();
     </script>
 </body>
+
 </html>
