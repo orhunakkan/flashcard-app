@@ -21,11 +21,13 @@
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            padding-top: 25vh;
             text-align: center;
             overflow: hidden;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
         }
 
         #flashcard {
@@ -138,10 +140,8 @@
             } else {
                 showRandomQuestion();
             }
-        }
-
-        // Event listener for both touch and click
-        flashcardElement.addEventListener('click', flipCard);
+        }        // Event listener for both touch and click on the entire document
+        document.addEventListener('click', flipCard);
 
         // Initialize with a random question
         showRandomQuestion();
